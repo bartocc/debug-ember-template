@@ -1,0 +1,46 @@
+{
+  // Utilisez IntelliSense pour en savoir plus sur les attributs possibles.
+  // Pointez pour afficher la description des attributs existants.
+  // Pour plus d'informations, visitez : https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "Debug localhost",
+      "url": "http://localhost:4200",
+      "port": 9222,
+      "webRoot": "${workspaceFolder}/dist/",
+      "sourceMapPathOverrides": {
+        "debug-ember-template/mirage/*": "${workspaceRoot}/mirage/*",
+        "debug-ember-template/tests/*": "${workspaceRoot}/tests/*",
+        "debug-ember-template/*": "${workspaceRoot}/app/*"
+      }
+    },
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "Debug tests",
+      "url": "http://localhost:4200/tests?hidepassed&nocontainer",
+      "port": 9222,
+      "webRoot": "${workspaceFolder}/dist/",
+      "sourceMapPathOverrides": {
+        "debug-ember-template/mirage/*": "${workspaceRoot}/mirage/*",
+        "debug-ember-template/tests/*": "${workspaceRoot}/tests/*",
+        "debug-ember-template/*": "${workspaceRoot}/app/*"
+      }
+    },
+    {
+      "type": "chrome",
+      "request": "attach",
+      "name": "Attach",
+      "port": 9222,
+      "webRoot": "${workspaceFolder}/dist/",
+      "sourceMapPathOverrides": {
+        "debug-ember-template/mirage/*": "${workspaceRoot}/mirage/*",
+        "debug-ember-template/tests/*": "${workspaceRoot}/tests/*",
+        "debug-ember-template/*": "${workspaceRoot}/app/*"
+      }
+    }
+  ]
+}
